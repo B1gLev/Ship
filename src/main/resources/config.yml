@@ -1,0 +1,4 @@
+bossbar:
+  enabled: false
+  type: NONE
+  message: "This is a message"
