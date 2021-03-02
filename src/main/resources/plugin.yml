@@ -1,0 +1,6 @@
+name: Ship
+version: ${project.version}
+main: hu.biglev.ship.Main
+api-version: 1.16
+authors: [ BigLev ]
+description: Egy modern hajós plugin
