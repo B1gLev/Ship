@@ -4,7 +4,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public final class Main extends JavaPlugin {
 
-    private Main instance;
+    private static Main instance;
 
     @Override
     public void onEnable() {
@@ -17,7 +17,7 @@ public final class Main extends JavaPlugin {
         instance = null;
     }
 
-    public Main getInstance() {
+    public static Main getInstance() {
         return instance;
     }
 }
