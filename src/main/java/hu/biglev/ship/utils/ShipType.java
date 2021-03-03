@@ -1,4 +1,4 @@
-package hu.biglev.ship.Utils;
+package hu.biglev.ship.utils;
 
 public enum ShipType {
 
