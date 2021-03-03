@@ -1,5 +1,7 @@
 package hu.biglev.ship.utils;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
 import hu.biglev.ship.Main;
 import org.json.simple.JSONArray;
 
@@ -32,7 +34,11 @@ public class Json {
         folder = new File(Main.getInstance().getDataFolder()+"/Data/");
 
         try (FileWriter writer = new FileWriter(folder+"/"+path)){
-            writer.write(jsonArray.toJSONString());
+
+            ObjectMapper mapper = new ObjectMapper().enable(SerializationFeature.INDENT_OUTPUT);
+            String json = mapper.writeValueAsString(jsonArray);
+
+            writer.write(json);
             writer.flush();
 
         }catch (IOException e){
